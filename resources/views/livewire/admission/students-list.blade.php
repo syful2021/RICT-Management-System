@@ -89,7 +89,7 @@
                             <td class="p-3 border-b border-[#ebedf2] dark:border-[#191e3a] text-center">
                                 {{ $student->profession }} </td>
                             <td class="p-3 border-b border-[#ebedf2] dark:border-[#191e3a] text-center">
-                                {{ $student->course->name }} </td>
+                                {{ $student->course->name ?? '-' }} </td>
                             <td class="p-3 border-b border-[#ebedf2] dark:border-[#191e3a] text-center">
                                 {{ $student->discount ?? "00" }} </td>
                             <td class="p-3 border-b border-[#ebedf2] dark:border-[#191e3a] text-center">
