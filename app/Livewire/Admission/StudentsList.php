@@ -32,18 +32,6 @@ class StudentsList extends Component
         $this->sortColumn = $column;
         $this->sortDirection = 'ASC';
     }       
-    // end ascending
-  
-    // Life cycle hooks
-    public function updatePerPage()       
-    {
-        $this->resetPage();
-    }
-    public function updateSearch()       
-    {
-        $this->resetPage();
-    }
-    
     public function render()
     {
         $students = Student::with('course')->search($this->search)
@@ -52,9 +40,7 @@ class StudentsList extends Component
       
         return view('livewire.admission.students-list',compact('students'));
     }
-
     // Update
-    
     public function ShowUpdateModel($id){
         $this->isModal = true;
         $data = Student::findOrFail($id);
